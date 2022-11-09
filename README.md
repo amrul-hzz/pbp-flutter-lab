@@ -1,16 +1,30 @@
-# tugas_flutter_pbp
+Amanda Nurul Izzah | 2106630480
 
-A new Flutter project.
+# TUGAS 7
 
-## Getting Started
+1. Jelaskan apa yang dimaksud dengan stateless widget dan stateful widget dan jelaskan perbedaan dari keduanya
+Widget adalah komponen pembangun dari program flutter. Apabila sebuah widget dapat berubah saat pengguna berinteraksi dengannya, maka widget tersebut stateful. Sebaliknya, apabila widget tersebut tidak pernah berubah, maka widget tersebut stateless.
 
-This project is a starting point for a Flutter application.
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- Text: menciptakan teks.
+- Row, Column: menciptakan layout yang flexible (seperti flexbox).
+- Container: menciptakan elemen persegi panjang.
+- MaterialApp: menciptakan widget-widget umum yang mengikuti Material Design. 
+- Scaffold: menciptakan struktur layout Material Design.
+- StatefulWidget: menciptakan widget yang bisa berubah-ubah statenya.
+- Statelesswidget: mencipatakan widget yang tidak bisa berubah state.
 
-A few resources to get you started if this is your first Flutter project:
+3. Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
+Perintah tersebut gunanya untuk membangun ulang view apabila ada perubahan yang diimplementasikan pada widget. Contohnya pada tugas kali ini, variabel _counter 
+berubah-ubah nilainya, sehingga untuk melihat perbedaannya, kita harus melakukan setState().
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+4. Jelaskan perbedaan antara const dengan final.
+Keduanya menandakan variabel yang nilainya tidak berubah namun untuk const nilai tersebut harus diketahui sebelum runtime, sedangkan final dapat digunakan untuk menandakan sebuah nilai yang baur dihasilkan saat runtime atau pun sebelum.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Mengubah title MaterialAp menjadi "counter_7"
+- Mengubah title MyHomePage menjadi "Program Counter"
+- Karena template dari Flutter sudah memiliki fitur button +, tinggal tambahkan button -
+- Membuat function _decrementCounter() yang akan berjalan saat button - ditekan
+- Menampilkan teks "GENAP"/"GANJIL" sesuai nilai variabel _counter menggunakan if-else di list Widget 
+- Menambahkan if(_counter > 0) saat meletakkan button - agar hanya muncul saat counter > 0.
