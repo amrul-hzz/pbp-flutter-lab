@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              // only show decrement buttonwhen counter is not zero
+              // only show decrement button when counter is not zero
               if (_counter > 0) ...[
                 FloatingActionButton(
                   onPressed: _decrementCounter,
