@@ -28,3 +28,16 @@ Keduanya menandakan variabel yang nilainya tidak berubah namun untuk const nilai
 - Membuat function _decrementCounter() yang akan berjalan saat button - ditekan
 - Menampilkan teks "GENAP"/"GANJIL" sesuai nilai variabel _counter menggunakan if-else di list Widget 
 - Menambahkan if(_counter > 0) saat meletakkan button - agar hanya muncul saat counter > 0.
+
+# TUGAS 8
+1. Jelaskan perbedaan Navigator.push dan Navigator.pushReplacement.
+Navigator.push mengganti halaman dengan cara "menimpa" di atas halaman sebelumnya (dengan begitu, kita masih menyimpan route ke halaman sebelumnya). Navigator.pushReplacement mengganti halaman dengan membuang route menuju halaman sebelumnya baru memasukkan halaman baru sehingga kita tidak bisa kembali ke halaman sebelumnya.
+
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+MaterialApp:
+Text
+3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+
+4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.

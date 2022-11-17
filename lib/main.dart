@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
-
+import 'package:tugas_flutter_pbp/budget.dart';
+import 'package:tugas_flutter_pbp/drawer.dart';
+import 'package:tugas_flutter_pbp/main.dart';
+import 'package:tugas_flutter_pbp/add_budget.dart';
+import 'package:tugas_flutter_pbp/data_budget.dart';
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget { 
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'counter_7',
+      title: 'counter_7', //program title
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Program Counter'),
+      home: const MyHomePage(title: 'Program Counter'), // title that shows in app
     );
   }
 }
@@ -50,6 +54,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+
+      drawer: const MyDrawer(),
 
       body: Center(
         child: Column(
