@@ -34,16 +34,23 @@ Keduanya menandakan variabel yang nilainya tidak berubah namun untuk const nilai
 Navigator.push mengganti halaman dengan cara "menimpa" di atas halaman sebelumnya (dengan begitu, kita masih menyimpan route ke halaman sebelumnya). Navigator.pushReplacement mengganti halaman dengan membuang route menuju halaman sebelumnya baru memasukkan halaman baru sehingga kita tidak bisa kembali ke halaman sebelumnya.
 
 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
-MaterialApp:
-Scaffold:
-AppBar:
-Text:
-Row:
-Colum:
-Padding:
-FloatingActionButton:
-ListView:
-SingleChildScrollView:
+- MaterialApp: menciptakan widget-widget umum yang mengikuti Material Design 
+- Scaffold: menciptakan struktur layout Material Design
+- StatefulWidget: menciptakan widget yang bisa berubah-ubah statenya
+- Statelesswidget: mencipatakan widget yang tidak bisa berubah state
+- AppBar: menambahkan semacam header yang bisa digunakan sebagai toolbar untuk widget lain
+- Container: menciptakan elemen persegi panjang
+- Text: menampilkan teks
+- Row: menampilkan childrennya secara horizontal
+- Column: menampilkan childrennya secara vertikal
+- Padding: menambah ruang kosong di sekitar widget dalamnya
+- FloatingActionButton: menambahkan tombol yang akan memanggil suatu aksi
+- ListView: menampilkan widgets dalam bentuk daftar
+- SingleChildScrollView: menampilkan widgets sedemikian sehinggan dapat di-scroll
+- DropdownButtonFormField: menciptakan input dropdown
+- TextFormField: menciptakan field input dimana pengguna dapat mengetik input mereka
+- TextButton: menciptakan button dengan teks di dalamnya
+- Card: menampilkan isinya dalam container berbentuk "kartu" dengan elevasi
 
 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
 - onPressed
@@ -51,12 +58,21 @@ SingleChildScrollView:
 - onSaved
 - onEnd
 - onTap
+- onSubmitted
+- etc.
 
 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
 Navigator bekerja seperti stack, dimana halaman yang ditampilkan adalah elemen top. Mengganti halaman dilakukan dengan push (menuju halaman baru) atau pop (menuju halaman sebelumnya).
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
-- Membuat model budget (file budget.dart)
-- Membuat drawer di file terpisah (file drawer.dart)
-- Menambahkan file add_budget.dart yang berisikan form
+- Membuat model budget (file budget.dart) yang berisikan judul, nominal, jenis, dan tanggal
+- Membuat drawer di file terpisah (file drawer.dart).  Drawer akan berisi widget yang mengarahkan navigator ke halaman utama (counter),
+add budget, dan data budget.
+- Menambahkan file add_budget.dart yang berisikan form. 
+- Menambah widgets input pada form
+- Data yang diinput akan di-pass sebagai argumen bagi function yang diimpor dari file data_budget.dart
 - Menambahkan file data_budget.dart untuk menampikan data yang diinput di form
+- Argumen yang di-pass dari add_budget.dart digunakan untuk menambahkan item baru ke list data (createdBudgets[])
+- Data dalam createdBudgets[] akan ditampilkan dalam Card
+- Menyelesaikan README.md
+- git add, commit, dan push
