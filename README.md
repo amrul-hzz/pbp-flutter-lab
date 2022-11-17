@@ -35,9 +35,28 @@ Navigator.push mengganti halaman dengan cara "menimpa" di atas halaman sebelumny
 
 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 MaterialApp:
-Text
+Scaffold:
+AppBar:
+Text:
+Row:
+Colum:
+Padding:
+FloatingActionButton:
+ListView:
+SingleChildScrollView:
+
 3. Sebutkan jenis-jenis event yang ada pada Flutter (contoh: onPressed).
+- onPressed
+- onChanged
+- onSaved
+- onEnd
+- onTap
 
 4. Jelaskan bagaimana cara kerja Navigator dalam "mengganti" halaman dari aplikasi Flutter.
+Navigator bekerja seperti stack, dimana halaman yang ditampilkan adalah elemen top. Mengganti halaman dilakukan dengan push (menuju halaman baru) atau pop (menuju halaman sebelumnya).
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Membuat model budget (file budget.dart)
+- Membuat drawer di file terpisah (file drawer.dart)
+- Menambahkan file add_budget.dart yang berisikan form
+- Menambahkan file data_budget.dart untuk menampikan data yang diinput di form
