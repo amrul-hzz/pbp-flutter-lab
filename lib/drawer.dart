@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:tugas_flutter_pbp/budget.dart';
+import 'package:tugas_flutter_pbp/model/budget.dart';
 import 'package:tugas_flutter_pbp/drawer.dart';
 import 'package:tugas_flutter_pbp/main.dart';
-import 'package:tugas_flutter_pbp/add_budget.dart';
-import 'package:tugas_flutter_pbp/data_budget.dart';
+import 'package:tugas_flutter_pbp/page/add_budget.dart';
+import 'package:tugas_flutter_pbp/page/data_budget.dart';
+import 'package:tugas_flutter_pbp/page/mywatchList_page.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -14,7 +15,7 @@ class MyDrawer extends StatefulWidget {
 
 class _MyDrawerState extends State<MyDrawer> {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Drawer(
       child: Column(
         children: [
@@ -25,7 +26,9 @@ class _MyDrawerState extends State<MyDrawer> {
               // Route menu ke halaman utama
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const MyHomePage(title: "Program Counter")),
+                MaterialPageRoute(
+                    builder: (context) =>
+                        const MyHomePage(title: "Program Counter")),
               );
             },
           ),
@@ -51,6 +54,17 @@ class _MyDrawerState extends State<MyDrawer> {
               );
             },
           ),
+
+          ListTile(
+            title: const Text('MyWatchList'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const MyWatchListPage()),
+              );
+            }
+          )
         ],
       ),
     );

@@ -76,3 +76,13 @@ add budget, dan data budget.
 - Data dalam createdBudgets[] akan ditampilkan dalam Card
 - Menyelesaikan README.md
 - git add, commit, dan push
+
+# TUGAS 9
+
+1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+
+2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+
+3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+
+4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
