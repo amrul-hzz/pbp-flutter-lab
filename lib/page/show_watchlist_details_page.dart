@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:tugas_flutter_pbp/model/mywatchlist.dart';
 import 'package:tugas_flutter_pbp/drawer.dart';
 
@@ -12,7 +13,6 @@ class ShowWatchListDetailsPage extends StatefulWidget {
 }
 
 class _ShowWatchListDetailsPageState extends State<ShowWatchListDetailsPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +46,7 @@ class _ShowWatchListDetailsPageState extends State<ShowWatchListDetailsPage> {
                     fontWeight: FontWeight.bold),
                 children: <TextSpan>[
                   TextSpan(
-                    text: '${widget.watchlistItem.fields.releaseDate}',
+                    text: '${DateFormat("MMM dd, y").format(widget.watchlistItem.fields.releaseDate)}',
                     style: const TextStyle(
                         fontSize: 14.0,
                         fontWeight: FontWeight.normal,
