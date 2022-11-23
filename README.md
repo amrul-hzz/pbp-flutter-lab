@@ -80,9 +80,27 @@ add budget, dan data budget.
 # TUGAS 9
 
 1. Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Ya, tetapi tidak lebih praktis. Lebih baik membuat model terlebih dahulu agar data dari JSON mudah di-parse.
 
 2. Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+Widget yang digunakan sama dengan pada Tugas 8 dengan tambahan:
+- RichText: menambahkan teks dengan formatting yang berbeda-beda
+- FutureBuilder: menjalankan fungsi asinkronus yang akan memperbaharui tampilan
 
 3. Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+- Flutter membuat sebuah network request
+- Web mengembalikan response berupa JSON
+- JSON diubah menjadi objek Dart sesuai dengan model yang digunakan
+- Data object tersebut di-fetch
+- Data siap digunakan dan dapat dipanggil dalam sebuah widget untuk ditampilkan
 
 4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Menambahkan permission untuk mengambil data dari internet di file AndroidManifest.xml
+- Menambahkan list tile pada drawer sebagai tombol navigasi menuju halaman mywatchlist
+- Membuat file model mywatchlist berdasarkan format JSON heroku mywatchlist dengan bantuan app.quicktype.io
+- Membuat file terpisah untuk function fetch
+- Membuat file page baru untuk menampilkan item-item mywatchlist menggunakan function fetch tersebut
+- Menambahkan navigasi menuju page detail pada masing-masing item di mywatchlist, data item tersebut diteruskan sebagai parameter
+- Membuat file page yang menerima data item sebagai parameter dan menampilkan detail-detail item yang ditekan
+- Menambahkan back button pada halaman detail untuk kembali ke halaman watchlist
+- Menyelesaikan README.md
