@@ -49,8 +49,11 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(15.0),
-                    boxShadow: const [
-                      BoxShadow(color: Colors.black, blurRadius: 2.0)
+                    boxShadow:  [
+                      BoxShadow(
+                        color:snapshot.data![index].fields.watched ? Colors.blue : Colors.red, 
+                        blurRadius: 2.0
+                      )
                     ]
                   ),
                   child: Column(
@@ -92,10 +95,9 @@ class _MyWatchListPageState extends State<MyWatchListPage> {
                             ),
                           );
                         } 
-                      ),  
+                      ), 
                     ], 
                   ),
-                  
                 ),
               );
             }
